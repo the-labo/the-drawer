@@ -37,7 +37,7 @@
         "required": false,
         "description": "Handle outside tap",
         "defaultValue": {
-          "value": "false",
+          "value": "null",
           "computed": false
         }
       }

@@ -123,6 +123,12 @@ Components
 
 Drawer for the-components
 
+**Props**
+
+| Name | Type | Description | Default |
+| --- | --- | ---- | ---- |
+| `open` | bool  | Open or not | `false` |
+| `onOutsideClick` | func  | Handle outside tap | `false` |
 
 ### TheDrawerStyle
 
