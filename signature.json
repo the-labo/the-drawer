@@ -2,7 +2,46 @@
   "TheDrawer": {
     "description": "Drawer for the-components",
     "displayName": "TheDrawer",
-    "methods": []
+    "methods": [
+      {
+        "name": "resize",
+        "docblock": null,
+        "modifiers": [],
+        "params": [],
+        "returns": null
+      },
+      {
+        "name": "handleClickOutside",
+        "docblock": null,
+        "modifiers": [],
+        "params": [],
+        "returns": null
+      }
+    ],
+    "props": {
+      "open": {
+        "type": {
+          "name": "bool"
+        },
+        "required": true,
+        "description": "Open or not",
+        "defaultValue": {
+          "value": "false",
+          "computed": false
+        }
+      },
+      "onOutsideClick": {
+        "type": {
+          "name": "func"
+        },
+        "required": false,
+        "description": "Handle outside tap",
+        "defaultValue": {
+          "value": "false",
+          "computed": false
+        }
+      }
+    }
   },
   "TheDrawerStyle": {
     "description": "Style for TheDrawer",
