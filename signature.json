@@ -1,0 +1,25 @@
+{
+  "TheDrawer": {
+    "description": "Drawer for the-components",
+    "displayName": "TheDrawer",
+    "methods": []
+  },
+  "TheDrawerStyle": {
+    "description": "Style for TheDrawer",
+    "displayName": "TheDrawerStyle",
+    "methods": [],
+    "props": {
+      "options": {
+        "type": {
+          "name": "object"
+        },
+        "required": false,
+        "description": "Style options",
+        "defaultValue": {
+          "value": "{}",
+          "computed": false
+        }
+      }
+    }
+  }
+}
