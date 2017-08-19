@@ -30,6 +30,7 @@ TheDrawerStyle.data = (options) => {
     dominantColor = ThemeValues.dominantColor,
     backgroundColor = ThemeValues.backgroundColor,
     borderColor = ThemeValues.borderColor,
+    contentWidth = ThemeValues.contentWidth,
   } = options
   return asStyleData('.the-drawer', {
     '&': {
@@ -37,13 +38,17 @@ TheDrawerStyle.data = (options) => {
       top: '44px',
       left: '-80vw',
       width: '80vw',
-      bottom: 10,
+      bottom: 0,
       background: backgroundColor,
       border: `1px solid ${borderColor}`,
       padding: '8px',
-      transition: 'left 400ms'
+      transition: 'left 400ms',
+      boxSizing: 'border-box',
+      zIndex: 16,
+      boxShadow: '0 2px 4px rgba(0,0,0,0.33)',
+      maxWidth: `${contentWidth}px`
     },
-    '.the-drawer-open': {
+    '&.the-drawer-open': {
       left: 0
     }
   })
