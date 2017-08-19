@@ -73,7 +73,7 @@ TheDrawer.propTypes = {
 
 TheDrawer.defaultProps = {
   open: false,
-  onOutsideClick: false
+  onOutsideClick: null
 }
 
 TheDrawer.displayName = 'TheDrawer'
