@@ -1,7 +1,7 @@
 /**
  * Drawer for the-components
  * @module the-drawer
- * @version 1.0.1
+ * @version 1.0.2
  */
 'use strict'
 
