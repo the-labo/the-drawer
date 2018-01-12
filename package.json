@@ -1,6 +1,6 @@
 {
   "name": "the-drawer",
-  "version": "3.0.0",
+  "version": "3.0.1",
   "description": "Drawer for the-components",
   "main": "shim",
   "scripts": {
