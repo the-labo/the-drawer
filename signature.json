@@ -4,14 +4,14 @@
     "displayName": "TheDrawer",
     "methods": [
       {
-        "name": "resize",
+        "name": "handleClickOutside",
         "docblock": null,
         "modifiers": [],
         "params": [],
         "returns": null
       },
       {
-        "name": "handleClickOutside",
+        "name": "resize",
         "docblock": null,
         "modifiers": [],
         "params": [],
@@ -19,17 +19,6 @@
       }
     ],
     "props": {
-      "open": {
-        "type": {
-          "name": "bool"
-        },
-        "required": true,
-        "description": "Open or not",
-        "defaultValue": {
-          "value": "false",
-          "computed": false
-        }
-      },
       "onOutsideClick": {
         "type": {
           "name": "func"
@@ -38,6 +27,17 @@
         "description": "Handle outside tap",
         "defaultValue": {
           "value": "null",
+          "computed": false
+        }
+      },
+      "open": {
+        "type": {
+          "name": "bool"
+        },
+        "required": true,
+        "description": "",
+        "defaultValue": {
+          "value": "false",
           "computed": false
         }
       }

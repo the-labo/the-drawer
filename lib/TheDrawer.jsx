@@ -1,12 +1,12 @@
 'use strict'
 
-import React from 'react'
-import PropTypes from 'prop-types'
 import c from 'classnames'
-import TheDrawerStyle from './TheDrawerStyle'
-import { get } from 'the-window'
-import { htmlAttributesFor, eventHandlersFor } from 'the-component-util'
+import PropTypes from 'prop-types'
+import React from 'react'
 import withClickOutside from 'react-click-outside'
+import { eventHandlersFor, htmlAttributesFor } from 'the-component-util'
+import { get } from 'the-window'
+import TheDrawerStyle from './TheDrawerStyle'
 
 /**
  * Drawer for the-components
@@ -16,28 +16,8 @@ class TheDrawer extends React.PureComponent {
     super(props)
     const s = this
     s.state = {
-      open: false
+      open: false,
     }
-  }
-
-  render () {
-    const s = this
-    const {props, state} = s
-    const {
-      className,
-      children,
-      open
-    } = props
-    return (
-      <div {...htmlAttributesFor(props, {except: ['className']})}
-           {...eventHandlersFor(props, {except: []})}
-           className={c('the-drawer', className, {
-             'the-drawer-open': open
-           })}
-      >
-        {children}
-      </div>
-    )
   }
 
   componentDidMount () {
@@ -46,11 +26,6 @@ class TheDrawer extends React.PureComponent {
 
   componentWillUnmount () {
     const s = this
-
-  }
-
-  resize () {
-
   }
 
   handleClickOutside () {
@@ -59,21 +34,43 @@ class TheDrawer extends React.PureComponent {
     onOutsideClick && onOutsideClick()
   }
 
+  render () {
+    const s = this
+    const {props, state} = s
+    const {
+      children,
+      className,
+      open,
+    } = props
+    return (
+      <div {...htmlAttributesFor(props, {except: ['className']})}
+           {...eventHandlersFor(props, {except: []})}
+           className={c('the-drawer', className, {
+             'the-drawer-open': open,
+           })}
+      >
+        {children}
+      </div>
+    )
+  }
+
+  resize () {
+  }
+
 }
 
 TheDrawer.Style = TheDrawerStyle
 
 TheDrawer.propTypes = {
   /** Open or not */
-  open: PropTypes.bool.isRequired,
-
   /** Handle outside tap */
-  onOutsideClick: PropTypes.func
+  onOutsideClick: PropTypes.func,
+  open: PropTypes.bool.isRequired,
 }
 
 TheDrawer.defaultProps = {
+  onOutsideClick: null,
   open: false,
-  onOutsideClick: null
 }
 
 TheDrawer.displayName = 'TheDrawer'
