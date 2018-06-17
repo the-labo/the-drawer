@@ -4,10 +4,10 @@
 
 'use strict'
 
-const {Readme} = require('the-templates')
+const { readmeMdBud } = require('ape-tmpl')
 const pkg = require('./package.json')
 
-module.exports = Readme({
+module.exports = readmeMdBud({
   pkg,
   repo: pkg.repository,
   sections: 'doc/guides/*.md.hbs',
