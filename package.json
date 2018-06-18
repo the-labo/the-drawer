@@ -16,8 +16,8 @@
     "react-click-outside": "^3.0.1",
     "the-button": "^3.0.20",
     "the-component-util": "^2.3.0",
-    "the-icon": "^4.0.5",
-    "the-style": "^2.1.4",
+    "the-icon": "^4.0.6",
+    "the-style": "^2.1.5",
     "the-window": "^6.1.0"
   },
   "devDependencies": {
