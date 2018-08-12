@@ -9,7 +9,6 @@ import TheDrawer from './TheDrawer'
 import TheDrawerStyle from './TheDrawerStyle'
 
 export {
-  TheDrawer,
-  TheDrawerStyle,
+ TheDrawer,
+ TheDrawerStyle,
 }
-
