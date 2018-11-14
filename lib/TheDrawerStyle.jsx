@@ -7,8 +7,8 @@ import { asStyleData } from 'the-component-util'
 import { TheStyle } from 'the-style'
 
 /** Style for TheDrawer */
-const TheDrawerStyle = ({className, id, options}) => (
-  <TheStyle {...{id}}
+const TheDrawerStyle = ({ className, id, options }) => (
+  <TheStyle {...{ id }}
             className={c('the-drawer-style', className)}
             styles={TheDrawerStyle.data(options)}
   />
@@ -25,15 +25,15 @@ TheDrawerStyle.defaultProps = {
 }
 
 TheDrawerStyle.data = (options) => {
-  const {ThemeValues} = TheStyle
+  const { ThemeValues } = TheStyle
   const {
     backgroundColor = ThemeValues.backgroundColor,
     borderColor = ThemeValues.borderColor,
     contentWidth = ThemeValues.contentWidth,
     dominantColor = ThemeValues.dominantColor,
   } = options
-  return asStyleData('.the-drawer', {
-    '&': {
+  return asStyleData({
+    '.the-drawer': {
       background: backgroundColor,
       border: `1px solid ${borderColor}`,
       bottom: 0,
@@ -48,7 +48,7 @@ TheDrawerStyle.data = (options) => {
       width: '80vw',
       zIndex: 16,
     },
-    '&.the-drawer-open': {
+    '.the-drawer.the-drawer-open': {
       left: 0,
     },
   })

@@ -30,21 +30,21 @@ class TheDrawer extends React.PureComponent {
 
   handleClickOutside () {
     const s = this
-    const {onOutsideClick} = s.props
+    const { onOutsideClick } = s.props
     onOutsideClick && onOutsideClick()
   }
 
   render () {
     const s = this
-    const {props, state} = s
+    const { props, state } = s
     const {
       children,
       className,
       open,
     } = props
     return (
-      <div {...htmlAttributesFor(props, {except: ['className']})}
-           {...eventHandlersFor(props, {except: []})}
+      <div {...htmlAttributesFor(props, { except: ['className'] })}
+           {...eventHandlersFor(props, { except: [] })}
            className={c('the-drawer', className, {
              'the-drawer-open': open,
            })}
@@ -56,7 +56,6 @@ class TheDrawer extends React.PureComponent {
 
   resize () {
   }
-
 }
 
 TheDrawer.Style = TheDrawerStyle
